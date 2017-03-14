@@ -19,18 +19,19 @@ header {
 	margin: 0;
 }
 
-.user_status {
+.status_pic {
 	position: absolute;
-	top: 76%;
+	top: 84%;
 	left: 0%;
-	bottom: 100%;
+	height: 0px;
+	bottom: 65%;
 	width: 100%;
 	max-width: 0px;
 	transform: translate(-50%,-50%);
 	border: 1px solid grey;
 }
 
-.user_status_text {
+.status_text {
 	position: absolute;
 	top: 90%;
 	left: 50%;

@@ -1,13 +1,26 @@
-body {
-	background: #490;
+html {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 	margin: 0;
+	font-size: 18px;
+	padding: 0;
+}
+
+body {
+	background: #343;
+	margin: 0;
+	right: 2%;
+	max-width: 1340px;
 }
 
 header {
 	
 }
 
-.signin {
+.signup {
 	background: #333;
 	border-color: #333;
 	color: white;
@@ -18,7 +31,7 @@ header {
 
 .signin2 {
 	background: #333;
-	color: red;
+	color: blue;
 	padding: 10px;
 	margin: 0;
 	float: left;
