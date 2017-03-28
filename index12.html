@@ -58,11 +58,18 @@
             <button class="js--alert-close">Close</button>
         </div>
 
-        <br><h4><span class="label label-default">New</span></h4></br>
+        <br><h4><span class="label label-default">News + Updates</span></h4></br>
 
         <div class="panel-info-1"><div class="panel panel-info">
             <div class="panel-heading">New</div>
-            v1.1-alpha pre-release is now open.
+            <br>v1.1-alpha pre-release is now open.</br>
+            <br>v1.1-alpha Now includes:</br></br>
+            <br>-version history search</br>
+            <br>-Sections 1-3</br>
+            <br>-minor bug fixes</br>
+            <br>[sign up errors]</br>
+            <br>[login in errors]</br>
+
         </div>
         </div>
 
@@ -111,7 +118,13 @@
         <div class="main_banner"><h3>Learn Simple Html, Javascript And Css</h3></div>
 
         <br><div class="code_list">
+            <br><h3>Inroduction</h3></br>
+            <p>For this you will need a text editor that supports html, css and JS. The text editor I chose to use to make this is called <a href="https://www.sublimetext.com/3">Sublime text</a></p>
+            <p>As you go through the tutorial each chapter will start to get harder.</p>
+            <p>You can read through all the code or just simply download it.
+            <br><a href="samplezip.zip">Download Zip</a></br>
             <br><p>For most of the Javascript parts <a href="https://jquery.com/">jQuery</a> is required</p></br>
+            <br></br>
 
         <br></br>
         <br></br>
@@ -185,7 +198,7 @@
         <br></br>
         <br></br>
         <br></br>
-        <br><span class="label label-warning">Part 2:Intro to using JS, html and css </span></br>
+        <br><span class="label label-warning">Part 2:Intro to using JS, html and css(Button functions)</span></br>
         <br><span class="label label-warning"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></span></br>
         <br></br>
         <br></br>
@@ -247,9 +260,168 @@
         </div>
 
 
+        <br><p>If you want to change the button color edit the part with brackets in the following example:</p></br>
+            <p>color: [lime];</p>
+
+            <br></br>
+        <br></br>
+        <br></br>
+        <br><span class="label label-warning">Part 3: Key Functions in JS</span></br>
+        <br><span class="label label-warning"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></span></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+
+        <p>Basic key alert function:</p>
+        <p>scripts.js</p>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                <br><p>$(function(){</p></br>
+
+                window.addEventListener("keydown", checkKeyPressed, false);
+ 
+                <p>function checkKeyPressed(e) {</p>
+                    <p>if (e.keyCode == "65") {</p>
+                        <p>alert("The 'a' key is pressed.");</p>
+                        <p>}</p>
+                    <p>}</p>
+
+                <p>});</p>
+
+
+                    
+            </div>
+
+
+
         </div>
         </br>
 
+        <br><p>That was the basic key pressed function the says an alert when the "a" key is pressed.</p></br>
+                <p>In the next example of code shown is for controlling a small block with the arrow keys.</p>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br><p>Key controlling function:</p></br>
+                <p>Please click the following link to view the open demo or scroll down to see the code</p>
+                <p><a href="https://aedan333.github.io/Calculator/Canvas/">Open Demo</a></p>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br><p>JavaScript:</p></br>
+                <div class="panel panel-default">
+                <div class="panel-body">
+                <p>var canvas;</p>
+                <p>var ctx;</p>
+                <p>var timer;</p>
+                <p>var posX = 0;</p>
+                <p>var posY = 0;</p>
+
+                <p>function init(){</p>
+    
+                <p>canvas = document.getElementById('canvas');</p>
+                <p>ctx = canvas.getContext('2d');</p>
+                <p>timer=setInterval(draw, 10);</p>
+
+                <p>ctx.canvas.width  = window.innerWidth;</p>
+                <p>ctx.canvas.height = window.innerHeight;</p>
+
+                <p>ctx.fillStyle = "rgb(255,255,255)";</p>
+                <p>ctx.fillRect (posX, posY, 50, 50);</p>
+
+                <p>};
+
+                <p>window.addEventListener('keydown', function(event){</p>
+
+                <p>switch(event.keyCode){</p>
+                <p>case 38:</p>
+                <p>posY -= 10;</p>
+                <p>break;</p>
+                <p>case 40:</p>
+                <p>posY += 10;</p>
+                <p>break;</p>
+                <p>case 37:</p>
+                <p>posX -= 10;</p>
+                <p>break;</p>
+                <p>case 39:</p>
+                <p>posX += 10;</p>
+                <p>break;</p>
+                <p>}
+
+                <p>});</p>
+
+                <p>function draw(){</p>
+                <p>ctx.clearRect(0, 0, canvas.width, canvas.height);</p>
+                <p>ctx.fillStyle = "rgb(255,255,255)";</p>
+                <p>ctx.fillRect (posX, posY, 50, 50);</p>
+                <p>}</p>
+            </div>
+            </div>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <p>CSS:</p>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                <p>html, body{</p>
+                <p>width: 100vw;</p>
+                <p>height: 100vh;</p>
+                <p>margin: 0;</p>
+                <p>}</p>
+
+                <p>canvas{</p>
+                <p>position: absolute;</p>
+                <p>top: 0;</p>
+                <p>left: 0;
+                <p>width: 100vw;</p>
+                <p>height: 100vh;</p>
+                <p>background-color: red;</p>
+                <p>margin:0;</p>
+                <p>}</p>
+
+                </div>
+                </div>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <p>HTML:</p>
+                <div class="panel panel-default">
+                <div class="panel-body">
+                <br><code>&lt;html&gt;</code></br>
+                <br><code>&lt;head&gt;</code></br>
+                <br><code>&lt;title&gt;</code><code>&lt;/title&gt;</code></br>
+
+                <br><code>&lt;meta name="apple-mobile-web-app-capable" content="yes"&gt;</code></br> 
+                <br><code>&lt;meta name="apple-mobile-web-app-status-bar-style" content="black" &gt;</code></br>
+                <br><code>&lt;link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon3.png&gt;</code></br>
+        
+                <br><code>&lt;meta charset="utf-8"&gt;</code></br>
+                <br><code>&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</code></br>
+
+                <br><code>&lt;link type="text/css" rel="stylesheet" href="canvasstyles.css"&gt;</code></br>
+
+                <br><code>&lt;/head&gt;</code></br>
+                <br><code>&lt;body onload="init();"&gt;</code></br>
+                <br><code>&lt;canvas id="canvas"&gt;</code></br>
+                <br><code>&lt;/canvas&gt;</code></br>
+                <br><code>&lt;/body onload="init();"&gt;</code></br>
+                <br><code>&lt;/html&gt;</code></br>
+
+
+                </div>
+                </div>
+
+
+
+
 
 
 
@@ -257,7 +429,7 @@
         </div>
 
 
-        <footer></footer> 
+        <footer><div class="footer">PI---v1.1-a</div></footer> 
 
 
          <script type="text/javascript" src="jquery-3.1.1.min.js"></script>     

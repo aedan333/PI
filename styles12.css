@@ -82,10 +82,11 @@ header {
 
 .panel-info-1 {
 	position: absolute;
-	left: 10%;
+	top: 50%;
+	left: 20%;
 	right: 30%;
 	width: 100%;
-	bottom: 50%;
+	bottom: 0%;
 	max-width: 250px;
 	transform: translate(-50%,-50%);
 	color: black;
@@ -188,11 +189,12 @@ nav ul li {
 	color: lime;
 }
 
-footer {
-	clear: both;
-	height: 20px;
-	width: 100%;
+.footer {
 	position: absolute;
-	left: 0px;
-	bottom: 0px;
+	top: 2000%;
+	left: 50%;
+	right: 50%;
+	bottom: 0%;
+	width: 100%;
+	max-width: 500px;
 }
